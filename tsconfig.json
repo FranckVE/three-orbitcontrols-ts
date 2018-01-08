@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "declaration": true,
+    "lib": ["es6", "dom"],
+    "outDir": "dist",
+    "strictNullChecks": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}
