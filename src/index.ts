@@ -554,7 +554,7 @@ export class OrbitControls extends EventDispatcher {
   pan( deltaX: number, deltaY: number ) {
     const element = this.domElement === document ? this.domElement.body : this.domElement;
 
-    if ( this.object instanceof PerspectiveCamera ) {
+    if ( this.object.type === "PerspectiveCamera" ) {
       // perspective
       const position = this.object.position;
       this.panInternalOffset.copy( position ).sub( this.target );
@@ -566,7 +566,7 @@ export class OrbitControls extends EventDispatcher {
       // we actually don't use screenWidth, since perspective camera is fixed to screen height
       this.panLeft( 2 * deltaX * targetDistance / (element as any).clientHeight, this.object.matrix );
       this.panUp( 2 * deltaY * targetDistance / (element as any).clientHeight, this.object.matrix );
-    } else if ( this.object instanceof OrthographicCamera ) {
+    } else if ( this.object.type === "OrthographicCamera" ) {
       // orthographic
       this.panLeft( deltaX * ( this.object.right - this.object.left ) / this.object.zoom / (element as any).clientWidth, this.object.matrix );
       this.panUp( deltaY * ( this.object.top - this.object.bottom ) / this.object.zoom / (element as any).clientHeight, this.object.matrix );
@@ -578,9 +578,9 @@ export class OrbitControls extends EventDispatcher {
   }
 
   dollyIn( dollyScale ) {
-    if ( this.object instanceof PerspectiveCamera ) {
+    if ( this.object.type === "PerspectiveCamera" ) {
       this.scale /= dollyScale;
-    } else if ( this.object instanceof OrthographicCamera ) {
+    } else if ( this.object.type === "OrthographicCamera" ) {
       this.object.zoom = Math.max( this.minZoom, Math.min( this.maxZoom, this.object.zoom * dollyScale ) );
       this.object.updateProjectionMatrix();
       this.zoomChanged = true;
@@ -591,9 +591,9 @@ export class OrbitControls extends EventDispatcher {
   }
 
   dollyOut( dollyScale ) {
-    if ( this.object instanceof PerspectiveCamera ) {
+    if ( this.object.type === "PerspectiveCamera" ) {
       this.scale *= dollyScale;
-    } else if ( this.object instanceof OrthographicCamera ) {
+    } else if ( this.object.type === "OrthographicCamera" ) {
       this.object.zoom = Math.max( this.minZoom, Math.min( this.maxZoom, this.object.zoom / dollyScale ) );
       this.object.updateProjectionMatrix();
       this.zoomChanged = true;
