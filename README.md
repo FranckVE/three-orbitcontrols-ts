@@ -38,3 +38,5 @@ controls.dampingFactor = 0.25;
 
 # Credit
 All credit goes to [OrbitControls.js](https://github.com/mrdoob/three.js/blob/master/examples/js/controls/OrbitControls.js) contributors.
+
+Works along with https://github.com/FranckVE/types-three
