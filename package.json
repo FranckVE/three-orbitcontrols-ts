@@ -1,6 +1,6 @@
 {
-  "name": "zadgroup-three-orbitcontrols-ts",
-  "version": "0.2.0",
+  "name": "new-three-orbitcontrols-ts",
+  "version": "0.2.1",
   "description": "ThreeJS OrbitControls as a standalone and typescript compatible npm module (patched for TypeScript 2.3.4)",
   "main": "dist",
   "scripts": {
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zadgroup/three-orbitcontrols-ts.git"
+    "url": "git+https://github.com/FranckVE/three-orbitcontrols-ts.git"
   },
-  "author": "Amer Alsabbagh",
+  "author": "Franck Vermeulen",
   "license": "MIT",
   "keywords": [
     "orbit",
@@ -24,9 +24,9 @@
     "controller"
   ],
   "bugs": {
-    "url": "https://github.com/zadgroup/three-orbitcontrols-ts/issues"
+    "url": "https://github.com/FranckVE/three-orbitcontrols-ts/issues"
   },
-  "homepage": "https://github.com/zadgroup/three-orbitcontrols-ts#readme",
+  "homepage": "https://github.com/FranckVE/three-orbitcontrols-ts#readme",
   "dependencies": {
     "three": "^0.86"
   },
