@@ -2,7 +2,7 @@
   "name": "new-three-orbitcontrols-ts",
   "version": "0.2.5",
   "description": "ThreeJS OrbitControls as a standalone and typescript compatible npm module (patched for TypeScript 2.3.4)",
-  "main": "src",
+  "main": "dist",
   "scripts": {
     "preversion": "npm test && ./node_modules/typescript/bin/tsc -p tsconfig.json",
     "test": "mocha --opts mocha.opts"
