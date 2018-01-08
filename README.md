@@ -1,3 +1,7 @@
+This version of ThreeJS OrbitControls attempts to solve the issue with OrbitControls when using TypeScript : https://github.com/nicolaspanel/three-orbitcontrols-ts/issues/1
+In short : 'Orbiting' works, but zoom and pan are both broken with the following message (I'm just showing the zoom one here):
+WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled.
+
 ThreeJS OrbitControls as a standalone and typescript compatible npm module.
 
 # Installation
